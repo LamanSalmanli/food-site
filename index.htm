@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Menu - PJ Azerbaijan</title>
+        <link rel="stylesheet" href="input.css">
+        <link rel="stylesheet" href="output.css">
+        <link rel="shortcut icon" href="img/papa.ico" type="image/x-icon" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <style>
+            #products{
+                width: 100%;
+                justify-content: center;
+            }
+            @media screen and (min-width: 1280px) {
+                #products{
+                    width: 80%;
+                    justify-content: left;
+
+                }
+            }
+        </style>
+    </head>
+    <body>
+         
+         <header class="sticky top-0  z-50 bg-white border-gray-200  shadow-sm">
+            <div class="container px-4 md:px-10 lg:px-20 xl:px-44 m-auto">              
+                <nav class="bg-white border-b border-gray-200">
+                    <div class="max-w-screen-xl flex justify-between mx-auto px-6 py-4">
+                        <a href="#" class="flex items-center space-x-3">
+                            <img src="img/logo.png" class="h-7" alt="Logo" />
+                        </a>
+
+                        <div>
+                            <button type="button" class="xl:hidden text-black bg-[#CFEB0B] hover:bg-white rounded-full text-lg px-5 tracking-widest h-11 text-center border border-black">DAXIL OL</button>
+
+                            <button id="hamburgerbtn" type="button" 
+                                class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg xl:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200">
+                                <span class="sr-only">Open main menu</span>
+                                <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+                                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
+                                </svg>
+                            </button>
+                        </div>
+        
+                        <div class="hidden w-full xl:block xl:w-auto" id="navbar-dropdown">
+                            <ul class="flex flex-col font-medium p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-white">
+                                <li>
+                                    <button id="dropdownNavbarLink1" data-dropdown-toggle="dropdownNavbar" class=" flex items-center justify-between w-full py-2 px-3 text-gray-900 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:p-0 md:w-auto ">
+                                        <i class="fa-solid fa-globe px-2"></i>Azərbaycanca
+                                        <svg class="w-2.5 h-2.5 ms-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+                                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"/>
+                                        </svg>
+                                    </button>
+                                    <div id="dropdownNavbar1" class="z-10 absolute hidden text-left font-normal bg-white divide-y divide-gray-100 shadow-sm border border-black">
+                                        <ul class="text-sm text-gray-700 dark:text-gray-400 text-left" aria-labelledby="dropdownLargeButton">
+                                            <li class="font-bold border-b hover:bg-blue-500 hover:text-white">
+                                                <a href="#" class="block px-4 py-1">English</a>
+                                            </li>
+                                            <li class="font-bold hover:bg-blue-500 hover:text-white">
+                                                <a href="#" class="block px-4 py-1">Azərbaycanca</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+                <div id="firstmenu" class="hidden xl:flex justify-between items-center z-50 absolute bg-white w-full xl:static xl:z-0">
+                    <ul id="firstmenyu" class="xl:flex gap-6 py-5  border-b border-gray-200 xl:border-0 ">
+                        <li class="hover:bg-gray-100 hover:cursor-pointer py-1 px-2.5 rounded-2xl font-extrabold text-base">Menyu</li>
+                        <li class="hover:bg-gray-100 hover:cursor-pointer py-1 px-2.5 rounded-2xl font-extrabold text-base">Təkliflər</li>
+                        <li class="hover:bg-gray-100 hover:cursor-pointer py-1 px-2.5 rounded-2xl font-extrabold text-base">Papa Bonus</li>
+                        <li class="hover:bg-gray-100 hover:cursor-pointer py-1 px-2.5 rounded-2xl font-extrabold text-base">Papa Talk</li>
+                        <li class="hover:bg-gray-100 hover:cursor-pointer py-1 px-2.5 rounded-2xl font-extrabold text-base">Haqqımızda</li>
+                    </ul>
+                    
+                    <button type="button" class="hidden xl:block text-black bg-[#CFEB0B] hover:bg-white rounded-full text-lg px-5 tracking-widest h-11 text-center border border-black">DAXIL OL</button>
+
+                </div>
+                <div id="secondmenu" class="overflow-x-auto y-100 py-2 bg-white">
+                    <ul class="flex gap-5 md:flex-wrap">
+                        <li ><a href="#mukafatlar" class="menu-item whitespace-nowrap hover:bg-gray-100 text-lg py-1 px-2.5 rounded-2xl active:bg-black active:!text-white" >★ MÜKAFATLAR</a></li>
+                        <li id="kampaniyalar"><a href="#" onclick="filterProducts('kampaniyalar')" class="menu-item hover:bg-gray-100 text-lg py-1 px-2.5 rounded-2xl  active:!bg-black active:!text-white">KAMPANİYALAR</a></li>
+                        <li id="pizza"><a href="#" onclick="filterProducts('pizza')" class="menu-item hover:bg-gray-100 text-lg py-1 px-2.5 rounded-2xl  active:!bg-black active:!text-white ">PİZZA</a></li>                        
+                        <li id="qalyanaltilar"><a href="#" onclick="filterProducts('qalyanaltilar')" class="active  hover:bg-gray-100 text-lg py-1 px-2.5 rounded-2xl  active:!bg-black active:!text-white">QƏLYANALTI</a></li>
+                        <li id="party"><a href="#pizza-party" onclick="filterProducts('party')" class="active whitespace-nowrap hover:bg-gray-100 text-lg py-1 px-2.5 rounded-2xl">PİZZA PARTY</a></li>
+                        <li id="pasta"><a href="#pasta" onclick="filterProducts('pasta')" class="active hover:bg-gray-100 text-lg py-1 px-2.5 rounded-2xl ">PASTA</a></li>
+                        <li id="salat"><a href="#salatlar" onclick="filterProducts('salat')" class="active hover:bg-gray-100 text-lg py-1 px-2.5 rounded-2xl ">SALATLAR</a></li>
+                        <li id="icki"><a href="#icki" onclick="filterProducts('icki')" class="active hover:bg-gray-100 text-lg py-1 px-2.5 rounded-2xl ">İÇKİLƏR</a></li>
+                        <li id="desert"><a href="#desertler" onclick="filterProducts('desert')" class="active hover:bg-gray-100 text-lg py-1 px-2.5 rounded-2xl ">DESERTLƏR</a></li>
+                        <li id="souses"><a href="#souslar" onclick="filterProducts('souses')" class="active hover:bg-gray-100 text-lg py-1 px-2.5 rounded-2xl ">SOUSLAR</a></li>
+                        <li id="papadias"><a href="#papadias" onclick="filterProducts('papadias')" class="active hover:bg-gray-100 text-lg py-1 px-2.5 rounded-2xl ">PAPADIAS</a></li>
+                    </ul>
+                </div>
+                
+            </div>
+            
+        </header>
+
+        <main>
+            <div class="container px-4 md:px-10 lg:px-20 xl:px-44 m-auto flex justify-between">
+                <div>
+                    <div id="categories"></div>
+                    <div  id="products" class="flex flex-wrap gap-5 "></div>
+                </div>
+                <div id="fullbasket" style="gap: 10px; position: fixed; top: 250px; right: 100px;" class="xl:flex flex-col hidden">
+                    <button id="catdirilmaBtn" style="width: 330px; padding: 8px 5px;" class="border border-gray-300 rounded-lg">Çatdırılma ünvanını daxil edin</button>            
+                    <div style="width: 330px; height: 150px;" class=" w-full border border-gray-300 rounded-lg text-center flex flex-col justify-center items-center">
+                        <div id="basket" class="overflow-y-auto w-full">                        
+                            <i class="fa-solid fa-cart-shopping text-gray-500 text-6xl"></i>
+                            <p class="text-sm text-gray-500">Səbətiniz boşdur</p>
+                        </div>
+                    </div>
+                    <div class="flex border border-gray-300 rounded-lg justify-between items-center">  
+                        <input id="kuponInp" class="border-none outline-none text-sm px-4 py-2" type="text" placeholder="Promokodunuz varmı?">
+                        <button id="kuponBtn" class="hidden items-center justify-center tracking-widest text-sm py-1 px-2 text-black bg-[#CFEB0B] hover:bg-white rounded-full border border-black">
+                            AKTİVLƏŞDİR                    
+                        </button>
+                    </div>
+                    <button class="items-center justify-center tracking-widest text-sm py-3 px-2 text-black bg-[#CFEB0B] hover:bg-white rounded-full border border-black">SİFARİŞİN TƏSDİQİNƏ KEÇİD EDİN</button>
+                </div>
+            </div>
+        
+            <div id="locationModal" style="background-color: rgba(0, 0, 0, 0.5); position: fixed; top: 0;left: 0;width: 100vw;height: 100vh; z-index: 1000;padding: 20px;" class="hidden items-center justify-center insert">
+                <div style="border-radius: 20px;" class="flex bg-white">
+                    <div style="width: 430px; padding: 25px;" >
+                        <button id="albtn" style="width: 170px; padding: 7px 0; border-radius: 20px; " class="text-center border-2 border-gray-400 mr-2"><i class="fa-solid fa-bag-shopping"></i>   Al-apar</button>
+                        <button id="catbtn" style="width: 170px; padding: 7px 0; border-radius: 20px;" class="text-center border-2 border-gray-400"><i class="fa-solid fa-truck-fast"></i>  Çatdırılma</button>
+                        <div id="deliveryType"></div>
+                    </div>
+                    <div>
+                        <iframe style="height: 630px; border-top-right-radius: 20px; border-bottom-right-radius: 20px;" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d48631.24116694164!2d49.73971009254456!3d40.37666110706224!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40307d3fb8d5ea6d%3A0x4f4de939a941d1d5!2sPapa%20Johns%20in%20Elml%C9%99r%20Akademiyas%C4%B1!5e0!3m2!1sen!2saz!4v1740929739064!5m2!1sen!2saz" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>                
+                    <div id="closeLocation" class="relative top-0 -right-12 text-4xl cursor-pointer text-white"><i class="fa-solid fa-x"></i></div>
+                </div>
+            </div>
+        
+            <div id="productModal" style="background-color: rgba(0, 0, 0, 0.5); position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; z-index: 1000; padding: 20px;" class="hidden items-center justify-center">
+                <div id="modalContent" style="border-radius: 20px; width: 1150px; height: 700px;" class="flex bg-gray-50 p-6 relative">
+                    <div style="width: 300px;">
+                        <img id="modalImage" src="" alt="Product Image" class="w-64 h-40 object-cover rounded-lg">
+                        <h2 id="modalTitle" class="text-xl font-bold mb-2"></h2>
+                        <p id="modalComposition" class="text-sm text-gray-700 mb-4"></p>
+                    </div>
+                    <div class="ml-6">
+                        <h2 id="olcu" class="font-bold text-2xl">Ölçü <span class="text-green-800 font-bold"> (Mütləq)</span></h2>
+                        <div class="flex">
+                            <div id="modalSizes" class="mt-4"></div>
+                            <button id="showMoreSizes" style="max-width: 50px;" class="mt-2 text-gray-500 ">Digər variant seçin ➔</button>
+                        </div>
+        
+                        <h2 id="xemirnovu" class="font-bold text-2xl">Xəmirin növünü seçin <span class="text-green-800 font-bold"> (Mütləq)</span></h2>
+                        <div class="flex">
+                            <div id="modalTypes" class="mt-4"></div>
+                            <button id="showMoreTypes" style="max-width: 50px;" class="mt-2 text-gray-500 ">Digər variant seçin ➔</button>
+                        </div>
+        
+                        <h2 id="pizzanovu" class="font-bold text-2xl">Pizzanın  növünü seçin <span class="text-green-800 font-bold"> (Mütləq)</span></h2>
+                        <div class="flex">
+                            <div id="modalSubcategory" class="mt-4"></div>
+                            <button id="showMoreSubcategory" style="max-width: 50px;" class="mt-2 text-gray-500 ">Digər variant seçin ➔</button>
+                        </div>
+                    </div>
+                    <div id="closeProduct" class="absolute top-2 right-2 text-2xl cursor-pointer text-gray-700">
+                        <i class="fa-solid fa-x"></i>
+                    </div>
+                    <div style="gap: 5px;" class="absolute bottom-4 right-28 flex flex-row items-center justify-center ">
+                        <i class="fa-solid fa-circle-minus text-3xl"></i>
+                        <p id="modalItemCount" class="text-3xl"></p>
+                        <i class="fa-solid fa-circle-plus text-3xl"></i>
+                        <p id="modalPrice" class=" font-semibold text-xl"></p>
+        
+                        <button id="addToBasket" style="border-radius: 20px;" class="hover:bg-white ml-6 border bg-[#CFEB0B] text-black border-black px-4 py-2 tracking-widest text-sm">                       
+                            SƏBƏTƏ ƏLAVƏ ET
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <button id="greenbasket" style="width: 100%; padding: 10px; background-color: green; z-index: 100; position: fixed; bottom: 0; left: 0; justify-content: space-between; align-items: center; color: white;" class="xl:hidden flex">
+                <i class="fa-solid fa-basket-shopping text-2xl"></i>
+                <div id="mobbasket">Yekun: 0</div>
+            </button>
+
+            
+            <div id="mobilesebet" style="background-color: white; position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; z-index: 1000; padding: 20px;" class="hidden items-center justify-center ">
+                <div id="closemobsebet" class="relative top-0 text-4xl cursor-pointer text-black"><i class="fa-solid fa-x"></i></div>
+
+                <div id="fullbasket2" style="gap: 10px; position: fixed; top:100px;" class="flex flex-col  w-full">
+
+                    <button id="catdirilmaBtn2" style=" padding: 8px 5px;" class="w-full border border-gray-300 rounded-lg">Çatdırılma ünvanını daxil edin</button>            
+                    <div style="height: 150px;" class=" w-full border border-gray-300 rounded-lg text-center flex flex-col justify-center items-center">
+                        <div id="basket2" class="overflow-y-auto w-full">                        
+                            <i class="fa-solid fa-cart-shopping text-gray-500 text-6xl"></i>
+                            <p class="text-sm text-gray-500">Səbətiniz boşdur</p>
+                        </div>
+                    </div>
+                    <div class="flex border border-gray-300 rounded-lg justify-between items-center">  
+                        <input id="kuponInp2" class="border-none outline-none text-sm px-4 py-2" type="text" placeholder="Promokodunuz varmı?">
+                        <button id="kuponBtn2" class="hidden items-center justify-center tracking-widest text-sm py-1 px-2 text-black bg-[#CFEB0B] hover:bg-white rounded-full border border-black">
+                            AKTİVLƏŞDİR                    
+                        </button>
+                    </div>
+                    
+                    <button class="items-center justify-center tracking-widest text-sm py-3 px-2 text-black bg-[#CFEB0B] hover:bg-white rounded-full border border-black">SİFARİŞİN TƏSDİQİNƏ KEÇİD EDİN</button>
+
+                </div>
+            </div>
+            
+        </main>
+
+        <footer style="background-color: #65A17A; margin-top: 50px; padding: 40px 0;" class="py-14 text-white w-full">
+            <div class="container px-4 md:px-10 lg:px-20 xl:px-44 m-auto w-full">
+                
+                <div style="gap: 50px;" class="flex  flex-row">
+                    <ul class="">
+                        <li>Şirkətimiz</li>
+                        <li>Haqqımızda</li>
+                        <li>Restoranlar</li>
+                        <li>İnqrediyentlər</li>
+                        <li>Papa Bonus</li>
+                        <li>Papa Talk</li>
+                    </ul>
+                    <ul class="">
+                        <li>Dəstək</li>
+                        <li>Bizimlə əlaqə saxlayın</li>
+                        <li>Qeydiyyatdan keçin</li>
+                        <li>Sual-Cavab</li>
+                        <li>Bizim dəstəyimiz</li>
+                    </ul>
+                    <div style="max-width: 400px;" class="max-w-[200px] ">
+                        <input type="text" placeholder="E-poçt ünvanını daxil et" class="w-full border p-2"/>
+                        <button class="mt-2 px-4 py-2 bg-white text-black">ABUNE OLUN</button>
+                        <p class="text-sm mt-2">Qeydiyyatdan keçməklə mən Papa John's-dan marketinq e-məktublarını almağa razıyam. Məxfilik Siyasətimizə bax.</p>
+                    </div>
+                </div>
+                <div class="flex gap-15 border-b border-white mb-3 justify-between">
+                    <h2 class="text-3xl font-bold">Daha Yaxşı İnqrediyentlər. Daha Yaxşı Pizza.</h2>
+                    <img style="max-width: 200px;" src="img/whitelogo.png" >
+                </div>
+                <div class="flex mb-4 justify-between">
+                    <ul class="flex">
+                        <li>Məxfilik siyasəti</li>
+                        <li>Kuki faylları ilə əlaqəli siyasət</li> 
+                        <li>Şərtlər və Qaydalar</li> 
+                        <li>Xəritə</li>
+                    </ul>
+                    <div style="gap: 20px; font-size: 20px;" class="flex ">
+                        <a href=""><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href=""><i class="fa-brands fa-instagram"></i></a>
+                        <a href=""><i class="fa-brands fa-youtube"></i></a>
+                        <a href=""><i class="fa-brands fa-tiktok"></i></a>
+                        <a href=""></a>
+                    </div>
+                </div>
+
+            </div>
+        </footer>
+        
+
+ 
+
+        <script src="data.js"></script>
+        <script src="script.js"></script>
+    </body>
+</html>
